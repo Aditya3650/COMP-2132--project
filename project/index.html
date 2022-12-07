@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll The Dice</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="css/style.css"> 
+    <!--Script-->
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+     
+     <script src="script/script.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <h2>
+            HOW TO PLAY
+        </h2>
+        <ul>
+            <li>To start a game, click on "ROLL THE DICE".</li>
+            <li>Keep clicking on it to progress to the next rounds.</li>
+            <li>At the third round, the player with the highest total score wins.</li>
+            <li>Click on "NEW GAME" to start a new game after the three rounds are over.</li>
+        </ul>
+        <hr>
+        <h2>RULES</h2>
+        <ol>
+            <li>Each player rolls two sets of dice.</li>
+            <li>If the player rolls a pair of the same numbers then the players score is the total of the two dice times 2.</li>
+            <li>If any of the players two dice comes up as a 1 then the score for that round for the player is 0.</li>
+            <li>If the player rolls any other combination of dice other than the ones mentioned above then the players score is the total value of the two dice.</li>
+            
+        </ol>
+    </div>
+
+    <div id="container2">
+        <p id="round"></p>
+        <hr>
+        <h2>You</h2>
+
+        <div class="dice-wrapper">
+            <img id="die-1" src="images/dice1.jpg" alt="die">
+            <img id="die-2" src="images/dice1.jpg" alt="die">
+        </div>
+        
+        <p id="myScore"></p>
+        <p id="myTotal"></p>
+        <hr>
+        <h2>Computer</h2>
+
+        <div class="dice-wrapper">
+            <img id="die-3" src="images/dice1.jpg" alt="die">
+            <img id="die-4" src="images/dice1.jpg" alt="die">
+        </div>
+
+        <p id="yourScore"></p>
+        <p id="yourTotal"></p>
+        <hr>
+
+        <button id="roll" onclick="roll()">ROLL THE DICE</button>
+        <button id="newGame" onclick="newGame()" class="disabled" disabled>NEW GAME</button>
+    </div>
+
+
+    <aside id="win">
+            
+        <h2>Result: You Won</h2>
+        <a id="close-pop-up-win">Close</a>
+        <p>
+            Congratulations! Dare to play another!
+        </p>
+        
+    </aside>
+
+    <aside id="lose">
+            
+        <h2>Result: You Lost</h2>
+        <a id="close-pop-up-lose">Close</a>
+        <p>
+            Unlucky! Better luck next time!
+        </p>
+        
+    </aside>
+
+    <aside id="tie">
+            
+        <h2>Result: Tied</h2>
+        <a id="close-pop-up-tie">Close</a>
+        <p>
+            Whoa! Rare result!
+        </p>
+        
+    </aside>
+
+   
+</body>
+</html>
